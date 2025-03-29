@@ -1,3 +1,5 @@
+using HotelListingWebAPI.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace HotelListingWebAPI
@@ -8,6 +10,13 @@ namespace HotelListingWebAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //adding connection string to program.cs file
+            var ConnectionString = builder.Configuration.GetConnectionString("LocalDbForWebApiCore");
+            builder.Services.AddDbContext<HotelListingDbContext>(options =>
+            {
+                options.UseSqlServer(ConnectionString);
+            });
+
             // Add services to the container.
             builder.Services.AddAuthorization();
 
@@ -16,7 +25,7 @@ namespace HotelListingWebAPI
             builder.Services.AddSwaggerGen();
 
             //adding cors configuration here 
-            builder.Services.AddCors(options =>
+            builder.Services.AddCors(options => 
             {
                 options.AddPolicy("AllowAll",
                     b => b.AllowAnyOrigin()
