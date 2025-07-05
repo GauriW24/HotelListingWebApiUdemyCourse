@@ -1,6 +1,4 @@
-﻿using HotelListingWebAPI.Model;
-
-namespace HotelListingWebAPI.Models
+﻿namespace HotelListingWebAPI.Models.Country
 {
     public class UpdateCountryModel:CountryModel
     {

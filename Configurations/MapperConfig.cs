@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HotelListingWebAPI.Data;
-using HotelListingWebAPI.Model;
-using HotelListingWebAPI.Models;
+using HotelListingWebAPI.Models.Country;
+using HotelListingWebAPI.Models.Hotel;
 
 
 namespace HotelListingWebAPI.Configurations
@@ -16,6 +16,7 @@ namespace HotelListingWebAPI.Configurations
             CreateMap<Country, UpdateCountryModel>().ReverseMap();
 
             CreateMap<Hotel, HotelDtlModel>().ReverseMap();
+            CreateMap<Hotel, CreateHotelDto>().ReverseMap();
         }
     }
 }

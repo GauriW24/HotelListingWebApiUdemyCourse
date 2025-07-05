@@ -1,4 +1,6 @@
-﻿namespace HotelListingWebAPI.Models
+﻿using HotelListingWebAPI.Models.Hotel;
+
+namespace HotelListingWebAPI.Models.Country
 {
     public class CountryDtlModel
     {

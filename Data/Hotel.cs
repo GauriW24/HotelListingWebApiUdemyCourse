@@ -1,4 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using HotelListingWebAPI.Data;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.OpenApi;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelListingWebAPI.Data
 {
@@ -13,4 +17,5 @@ namespace HotelListingWebAPI.Data
 
         public Country? country { get; set; }
     }
+
 }

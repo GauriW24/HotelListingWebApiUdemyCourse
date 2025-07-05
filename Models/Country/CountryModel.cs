@@ -1,4 +1,4 @@
-﻿namespace HotelListingWebAPI.Model
+﻿namespace HotelListingWebAPI.Models.Country
 {
     public class CountryModel
     {
